@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D092A0D85C700538DC9 /* AppDelegate.swift */; };
+		B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */; };
+		B7C45D0E2A0D85C700538DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0D2A0D85C700538DC9 /* ViewController.swift */; };
+		B7C45D112A0D85C700538DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C45D0F2A0D85C700538DC9 /* Main.storyboard */; };
+		B7C45D132A0D85C900538DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C45D122A0D85C900538DC9 /* Assets.xcassets */; };
+		B7C45D162A0D85C900538DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C45D142A0D85C900538DC9 /* LaunchScreen.storyboard */; };
+		B7C45D212A0D85CA00538DC9 /* CarrefourTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7C45D1D2A0D85CA00538DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C45CFE2A0D85C700538DC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C45D052A0D85C700538DC9;
+			remoteInfo = CarrefourTest;
+		};
+		B7C45D272A0D85CA00538DC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C45CFE2A0D85C700538DC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C45D052A0D85C700538DC9;
+			remoteInfo = CarrefourTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7C45D062A0D85C700538DC9 /* CarrefourTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrefourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C45D092A0D85C700538DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B7C45D0D2A0D85C700538DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7C45D102A0D85C700538DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7C45D122A0D85C900538DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7C45D152A0D85C900538DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7C45D172A0D85C900538DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C45D1C2A0D85CA00538DC9 /* CarrefourTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrefourTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrefourTestTests.swift; sourceTree = "<group>"; };
+		B7C45D262A0D85CA00538DC9 /* CarrefourTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrefourTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7C45D032A0D85C700538DC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D192A0D85CA00538DC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D232A0D85CA00538DC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7C45CFD2A0D85C700538DC9 = {
+			isa = PBXGroup;
+			children = (
+				B7C45D082A0D85C700538DC9 /* CarrefourTest */,
+				B7C45D1F2A0D85CA00538DC9 /* CarrefourTestTests */,
+				B7C45D072A0D85C700538DC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7C45D072A0D85C700538DC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7C45D062A0D85C700538DC9 /* CarrefourTest.app */,
+				B7C45D1C2A0D85CA00538DC9 /* CarrefourTestTests.xctest */,
+				B7C45D262A0D85CA00538DC9 /* CarrefourTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7C45D082A0D85C700538DC9 /* CarrefourTest */ = {
+			isa = PBXGroup;
+			children = (
+				B7C45D092A0D85C700538DC9 /* AppDelegate.swift */,
+				B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */,
+				B7C45D0D2A0D85C700538DC9 /* ViewController.swift */,
+				B7C45D0F2A0D85C700538DC9 /* Main.storyboard */,
+				B7C45D122A0D85C900538DC9 /* Assets.xcassets */,
+				B7C45D142A0D85C900538DC9 /* LaunchScreen.storyboard */,
+				B7C45D172A0D85C900538DC9 /* Info.plist */,
+			);
+			path = CarrefourTest;
+			sourceTree = "<group>";
+		};
+		B7C45D1F2A0D85CA00538DC9 /* CarrefourTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */,
+			);
+			path = CarrefourTestTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7C45D052A0D85C700538DC9 /* CarrefourTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C45D302A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTest" */;
+			buildPhases = (
+				B7C45D022A0D85C700538DC9 /* Sources */,
+				B7C45D032A0D85C700538DC9 /* Frameworks */,
+				B7C45D042A0D85C700538DC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarrefourTest;
+			productName = CarrefourTest;
+			productReference = B7C45D062A0D85C700538DC9 /* CarrefourTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7C45D1B2A0D85CA00538DC9 /* CarrefourTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C45D332A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTestTests" */;
+			buildPhases = (
+				B7C45D182A0D85CA00538DC9 /* Sources */,
+				B7C45D192A0D85CA00538DC9 /* Frameworks */,
+				B7C45D1A2A0D85CA00538DC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7C45D1E2A0D85CA00538DC9 /* PBXTargetDependency */,
+			);
+			name = CarrefourTestTests;
+			productName = CarrefourTestTests;
+			productReference = B7C45D1C2A0D85CA00538DC9 /* CarrefourTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7C45D252A0D85CA00538DC9 /* CarrefourTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C45D362A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTestUITests" */;
+			buildPhases = (
+				B7C45D222A0D85CA00538DC9 /* Sources */,
+				B7C45D232A0D85CA00538DC9 /* Frameworks */,
+				B7C45D242A0D85CA00538DC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7C45D282A0D85CA00538DC9 /* PBXTargetDependency */,
+			);
+			name = CarrefourTestUITests;
+			productName = CarrefourTestUITests;
+			productReference = B7C45D262A0D85CA00538DC9 /* CarrefourTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7C45CFE2A0D85C700538DC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B7C45D052A0D85C700538DC9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B7C45D1B2A0D85CA00538DC9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B7C45D052A0D85C700538DC9;
+					};
+					B7C45D252A0D85CA00538DC9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B7C45D052A0D85C700538DC9;
+					};
+				};
+			};
+			buildConfigurationList = B7C45D012A0D85C700538DC9 /* Build configuration list for PBXProject "CarrefourTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7C45CFD2A0D85C700538DC9;
+			productRefGroup = B7C45D072A0D85C700538DC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7C45D052A0D85C700538DC9 /* CarrefourTest */,
+				B7C45D1B2A0D85CA00538DC9 /* CarrefourTestTests */,
+				B7C45D252A0D85CA00538DC9 /* CarrefourTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7C45D042A0D85C700538DC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C45D162A0D85C900538DC9 /* LaunchScreen.storyboard in Resources */,
+				B7C45D132A0D85C900538DC9 /* Assets.xcassets in Resources */,
+				B7C45D112A0D85C700538DC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D1A2A0D85CA00538DC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D242A0D85CA00538DC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7C45D022A0D85C700538DC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C45D0E2A0D85C700538DC9 /* ViewController.swift in Sources */,
+				B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */,
+				B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D182A0D85CA00538DC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C45D212A0D85CA00538DC9 /* CarrefourTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C45D222A0D85CA00538DC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7C45D1E2A0D85CA00538DC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7C45D052A0D85C700538DC9 /* CarrefourTest */;
+			targetProxy = B7C45D1D2A0D85CA00538DC9 /* PBXContainerItemProxy */;
+		};
+		B7C45D282A0D85CA00538DC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7C45D052A0D85C700538DC9 /* CarrefourTest */;
+			targetProxy = B7C45D272A0D85CA00538DC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7C45D0F2A0D85C700538DC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C45D102A0D85C700538DC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7C45D142A0D85C900538DC9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C45D152A0D85C900538DC9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7C45D2E2A0D85CA00538DC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7C45D2F2A0D85CA00538DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7C45D312A0D85CA00538DC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarrefourTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7C45D322A0D85CA00538DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarrefourTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7C45D342A0D85CA00538DC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarrefourTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarrefourTest";
+			};
+			name = Debug;
+		};
+		B7C45D352A0D85CA00538DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarrefourTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarrefourTest";
+			};
+			name = Release;
+		};
+		B7C45D372A0D85CA00538DC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarrefourTest;
+			};
+			name = Debug;
+		};
+		B7C45D382A0D85CA00538DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QCEA3X339;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.actdigital.CarrefourTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarrefourTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7C45D012A0D85C700538DC9 /* Build configuration list for PBXProject "CarrefourTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C45D2E2A0D85CA00538DC9 /* Debug */,
+				B7C45D2F2A0D85CA00538DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C45D302A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C45D312A0D85CA00538DC9 /* Debug */,
+				B7C45D322A0D85CA00538DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C45D332A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C45D342A0D85CA00538DC9 /* Debug */,
+				B7C45D352A0D85CA00538DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C45D362A0D85CA00538DC9 /* Build configuration list for PBXNativeTarget "CarrefourTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C45D372A0D85CA00538DC9 /* Debug */,
+				B7C45D382A0D85CA00538DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7C45CFE2A0D85C700538DC9 /* Project object */;
+}
