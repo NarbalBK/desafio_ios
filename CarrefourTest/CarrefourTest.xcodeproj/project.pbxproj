@@ -17,6 +17,7 @@
 		B7C45D3D2A0D8BA200538DC9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */; };
 		B7EEDCA62A0D91BE003816A8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCA52A0D91BE003816A8 /* Network.swift */; };
 		B7EEDCA92A0D981E003816A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCA82A0D981E003816A8 /* User.swift */; };
+		B7EEDCAC2A0DAC35003816A8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCAB2A0DAC35003816A8 /* HomeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B7EEDCA52A0D91BE003816A8 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B7EEDCA82A0D981E003816A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7EEDCAB2A0DAC35003816A8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		B7C45D082A0D85C700538DC9 /* CarrefourTest */ = {
 			isa = PBXGroup;
 			children = (
+				B7EEDCAA2A0DAC01003816A8 /* Repository */,
 				B7EEDCA72A0D980C003816A8 /* Models */,
 				B7EEDCA42A0D9198003816A8 /* Network */,
 				B7C45D392A0D8B3400538DC9 /* Coordinator */,
@@ -144,6 +147,14 @@
 				B7EEDCA82A0D981E003816A8 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B7EEDCAA2A0DAC01003816A8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B7EEDCAB2A0DAC35003816A8 /* HomeRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EEDCAC2A0DAC35003816A8 /* HomeRepository.swift in Sources */,
 				B7C45D3B2A0D8B6100538DC9 /* Coordinator.swift in Sources */,
 				B7C45D0E2A0D85C700538DC9 /* ViewController.swift in Sources */,
 				B7EEDCA62A0D91BE003816A8 /* Network.swift in Sources */,
