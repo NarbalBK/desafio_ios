@@ -15,6 +15,8 @@
 		B7C45D212A0D85CA00538DC9 /* CarrefourTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */; };
 		B7C45D3B2A0D8B6100538DC9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D3A2A0D8B6100538DC9 /* Coordinator.swift */; };
 		B7C45D3D2A0D8BA200538DC9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */; };
+		B7EEDCA62A0D91BE003816A8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCA52A0D91BE003816A8 /* Network.swift */; };
+		B7EEDCA92A0D981E003816A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCA82A0D981E003816A8 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B7C45D262A0D85CA00538DC9 /* CarrefourTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrefourTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C45D3A2A0D8B6100538DC9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B7EEDCA52A0D91BE003816A8 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B7EEDCA82A0D981E003816A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		B7C45D082A0D85C700538DC9 /* CarrefourTest */ = {
 			isa = PBXGroup;
 			children = (
+				B7EEDCA72A0D980C003816A8 /* Models */,
+				B7EEDCA42A0D9198003816A8 /* Network */,
 				B7C45D392A0D8B3400538DC9 /* Coordinator */,
 				B7C45D092A0D85C700538DC9 /* AppDelegate.swift */,
 				B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */,
@@ -122,6 +128,22 @@
 				B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B7EEDCA42A0D9198003816A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B7EEDCA52A0D91BE003816A8 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B7EEDCA72A0D980C003816A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7EEDCA82A0D981E003816A8 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +278,11 @@
 			files = (
 				B7C45D3B2A0D8B6100538DC9 /* Coordinator.swift in Sources */,
 				B7C45D0E2A0D85C700538DC9 /* ViewController.swift in Sources */,
+				B7EEDCA62A0D91BE003816A8 /* Network.swift in Sources */,
 				B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */,
 				B7C45D3D2A0D8BA200538DC9 /* MainCoordinator.swift in Sources */,
 				B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */,
+				B7EEDCA92A0D981E003816A8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
