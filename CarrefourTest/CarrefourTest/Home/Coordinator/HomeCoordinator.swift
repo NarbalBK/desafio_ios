@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  HomeCoordinator.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 11/05/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainCoordinator: NSObject, Coordinator {
+final class HomeCoordinator: NSObject, Coordinator {
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -15,7 +15,7 @@ final class MainCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        let vc = ViewController()
+        let vc = HomeController()
         navigationController.pushViewController(vc, animated: true)
     }
 }
