@@ -13,6 +13,8 @@
 		B7C45D132A0D85C900538DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C45D122A0D85C900538DC9 /* Assets.xcassets */; };
 		B7C45D162A0D85C900538DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C45D142A0D85C900538DC9 /* LaunchScreen.storyboard */; };
 		B7C45D212A0D85CA00538DC9 /* CarrefourTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */; };
+		B7C45D3B2A0D8B6100538DC9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D3A2A0D8B6100538DC9 /* Coordinator.swift */; };
+		B7C45D3D2A0D8BA200538DC9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		B7C45D1C2A0D85CA00538DC9 /* CarrefourTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrefourTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrefourTestTests.swift; sourceTree = "<group>"; };
 		B7C45D262A0D85CA00538DC9 /* CarrefourTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrefourTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C45D3A2A0D8B6100538DC9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		B7C45D082A0D85C700538DC9 /* CarrefourTest */ = {
 			isa = PBXGroup;
 			children = (
+				B7C45D392A0D8B3400538DC9 /* Coordinator */,
 				B7C45D092A0D85C700538DC9 /* AppDelegate.swift */,
 				B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */,
 				B7C45D0D2A0D85C700538DC9 /* ViewController.swift */,
@@ -108,6 +113,15 @@
 				B7C45D202A0D85CA00538DC9 /* CarrefourTestTests.swift */,
 			);
 			path = CarrefourTestTests;
+			sourceTree = "<group>";
+		};
+		B7C45D392A0D8B3400538DC9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B7C45D3A2A0D8B6100538DC9 /* Coordinator.swift */,
+				B7C45D3C2A0D8BA200538DC9 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C45D3B2A0D8B6100538DC9 /* Coordinator.swift in Sources */,
 				B7C45D0E2A0D85C700538DC9 /* ViewController.swift in Sources */,
 				B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */,
+				B7C45D3D2A0D8BA200538DC9 /* MainCoordinator.swift in Sources */,
 				B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
