@@ -8,21 +8,39 @@
 import UIKit
 
 class HomeController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .red
-        
-        let repository = HomeRepository()
-        let task = try? repository.getUsers { result in
-            switch result {
-            case .success(let objc):
-                print(objc)
-            case .failure(let error):
-                print(error)
-            }
-        }
+    
+    let homeView: HomeView = {
+        let view = HomeView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        commomInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commomInit()
+    }
+    
+    func commomInit() {
+        setupViews()
+        setupConstraints()
+    }
+    
+    func setupViews() {
+        view.addSubview(homeView)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            homeView.topAnchor.constraint(equalTo: view.topAnchor),
+            homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
 
