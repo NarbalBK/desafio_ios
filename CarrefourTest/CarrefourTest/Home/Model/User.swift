@@ -8,6 +8,7 @@
 import Foundation
 
 struct User: Decodable {
-    let login: String
-    let avatar_url: String
+    let login: String?
+    let url: String?
+    let avatar_url: String?
 }

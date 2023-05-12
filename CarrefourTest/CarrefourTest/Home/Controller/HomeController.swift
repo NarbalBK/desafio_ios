@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+final class HomeController: UIViewController {
     
-    let homeView: HomeView = {
-        let view = HomeView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    let contentStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -25,21 +25,25 @@ class HomeController: UIViewController {
         commomInit()
     }
     
-    func commomInit() {
+    func addView(view: UIView) {
+        contentStackView.addArrangedSubview(view)
+    }
+    
+    private func commomInit() {
         setupViews()
         setupConstraints()
     }
     
-    func setupViews() {
-        view.addSubview(homeView)
+    private func setupViews() {
+        view.addSubview(contentStackView)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
-            homeView.topAnchor.constraint(equalTo: view.topAnchor),
-            homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            contentStackView.topAnchor.constraint(equalTo: view.topAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            contentStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 }

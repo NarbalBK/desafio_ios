@@ -7,9 +7,14 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cardContentView: UIView!
+    
+    weak var viewModelDelegate: HomeViewModel?
+    
+    var userDetailTask: URLSessionDataTask?
+    var cellModel: HomeCellModel?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -23,12 +28,19 @@ class HomeTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setCellData(data: HomeCellModel) {
-        fullNameLabel.text = data.fullName
-        nickNameLabel.text = data.nickName
-        locationLabel.text = data.location
-        numberOfReposLabel.text = "\(data.repos)"
-        numberOfFollowersLabel.text = "\(data.followers)"
+    func setCellData(url: String) {
+        userDetailTask = viewModelDelegate?.getUserDetail(url: url) { [weak self] userDetail in
+            guard let weakself = self else { return }
+            weakself.cellModel = HomeCellModel(data: userDetail)
+            
+            DispatchQueue.main.async {
+                weakself.fullNameLabel.text = weakself.cellModel?.fullName
+                weakself.nickNameLabel.text = weakself.cellModel?.nickName
+                weakself.locationLabel.text = weakself.cellModel?.location
+                weakself.numberOfReposLabel.text = weakself.cellModel?.reposFormated
+                weakself.numberOfFollowersLabel.text = weakself.cellModel?.followersFormated
+            }
+        }
     }
     
     func setProfileImage() {
@@ -42,5 +54,8 @@ class HomeTableViewCell: UITableViewCell {
         locationLabel.text = ""
         numberOfReposLabel.text = ""
         numberOfFollowersLabel.text = ""
+        
+        userDetailTask?.cancel()
+        userDetailTask = nil
     }
 }
