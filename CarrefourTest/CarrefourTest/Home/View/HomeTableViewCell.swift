@@ -11,9 +11,9 @@ final class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cardContentView: UIView!
     
-    weak var viewModelDelegate: HomeViewModel?
-    
     var userDetailTask: URLSessionDataTask?
+    var userImageTask: URLSessionDataTask?
+    
     var cellModel: HomeCellModel?
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -25,26 +25,24 @@ final class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        profileImageView.layer.cornerRadius = 20
     }
-    
-    func setCellData(url: String) {
-        userDetailTask = viewModelDelegate?.getUserDetail(url: url) { [weak self] userDetail in
-            guard let weakself = self else { return }
-            weakself.cellModel = HomeCellModel(data: userDetail)
-            
-            DispatchQueue.main.async {
-                weakself.fullNameLabel.text = weakself.cellModel?.fullName
-                weakself.nickNameLabel.text = weakself.cellModel?.nickName
-                weakself.locationLabel.text = weakself.cellModel?.location
-                weakself.numberOfReposLabel.text = weakself.cellModel?.reposFormated
-                weakself.numberOfFollowersLabel.text = weakself.cellModel?.followersFormated
-            }
+     
+    func setCellData(data: HomeCellModel) {
+        cellModel = data
+        DispatchQueue.main.async {
+            self.fullNameLabel.text = data.fullName
+            self.nickNameLabel.text = data.nickName
+            self.locationLabel.text = data.location
+            self.numberOfReposLabel.text = data.reposFormated
+            self.numberOfFollowersLabel.text = data.followersFormated
         }
     }
     
-    func setProfileImage() {
-        
+    func setProfileImage(data: Data) {
+        DispatchQueue.main.async {
+            self.profileImageView.image = UIImage(data: data)
+        }
     }
 
     override func prepareForReuse() {
@@ -56,6 +54,9 @@ final class HomeTableViewCell: UITableViewCell {
         numberOfFollowersLabel.text = ""
         
         userDetailTask?.cancel()
+        userImageTask?.cancel()
+        
         userDetailTask = nil
+        userImageTask = nil
     }
 }

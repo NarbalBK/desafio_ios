@@ -57,10 +57,16 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
         
-        cell.viewModelDelegate = viewModelDelegate
+        if let urlData = viewModelDelegate?.users[indexPath.row].url {
+            cell.userDetailTask = viewModelDelegate?.getUserDetail(url: urlData) { userDetail in
+                cell.setCellData(data: HomeCellModel(data: userDetail))
+            }
+        }
         
-        if let url = viewModelDelegate?.users[indexPath.row].url {
-            cell.setCellData(url: url)
+        if let urlImage = viewModelDelegate?.users[indexPath.row].avatar_url {
+            cell.userImageTask = viewModelDelegate?.getImageProfile(url: urlImage) { imageData in
+                cell.setProfileImage(data: imageData)
+            }
         }
         
         return cell

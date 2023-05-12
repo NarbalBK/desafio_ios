@@ -16,6 +16,8 @@ final class HomeViewModel: NSObject {
     
     var users: [User] = []
     
+    private let cache = NSCache<NSString, AnyObject>()
+    
     init (view: HomeView, coordinator: HomeCoordinator, repository: HomeRepository) {
         self.view = view
         coordinatorDelegate = coordinator
@@ -42,10 +44,16 @@ final class HomeViewModel: NSObject {
     }
     
     func getUserDetail(url: String, completion: @escaping (UserDetail) -> Void) -> URLSessionDataTask? {
+        if let cachedData = cache.object(forKey: url as NSString) as? UserDetail {
+            completion(cachedData)
+            return nil
+        }
+        
         do {
-            let task = try repository.getUserDetail(url: url) { result in
+            let task = try repository.getUserDetail(url: url) { [weak self] result in
                 switch result {
                 case .success(let userDetail):
+                    self?.cache.setObject(userDetail as AnyObject, forKey: url as NSString)
                     completion(userDetail)
                 case .failure(let error):
                     print(error)
@@ -58,7 +66,26 @@ final class HomeViewModel: NSObject {
         return nil
     }
     
-    deinit {
-        print("FOI DESALOCADO")
+    func getImageProfile(url: String, completion: @escaping (Data) -> Void) -> URLSessionDataTask? {
+        if let cachedImage = cache.object(forKey: url as NSString) as? Data {
+            completion(cachedImage)
+            return nil
+        }
+        
+        do {
+            let task = try repository.getImageProfile(url: url) { [weak self] result in
+                switch result {
+                case .success(let imageData):
+                    self?.cache.setObject(NSData(data: imageData), forKey: url as NSString)
+                    completion(imageData)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            return task
+        } catch {
+            print(error)
+        }
+        return nil
     }
 }
