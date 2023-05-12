@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  UserListViewModel.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 12/05/23.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class HomeViewModel: NSObject {
+final class UserListViewModel: NSObject {
     
-    unowned let view: HomeView
+    unowned let view: UserListView
     unowned let coordinatorDelegate: HomeCoordinator
     
     let repository: HomeRepository
@@ -18,7 +18,7 @@ final class HomeViewModel: NSObject {
     
     private let cache = NSCache<NSString, AnyObject>()
     
-    init (view: HomeView, coordinator: HomeCoordinator, repository: HomeRepository) {
+    init (view: UserListView, coordinator: HomeCoordinator, repository: HomeRepository) {
         self.view = view
         coordinatorDelegate = coordinator
         self.repository = repository

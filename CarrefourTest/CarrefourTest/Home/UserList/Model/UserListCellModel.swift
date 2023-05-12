@@ -1,5 +1,5 @@
 //
-//  HomeCellModel.swift
+//  UserListCellModel.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 11/05/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeCellModel {
+struct UserListCellModel {
     let fullName: String?
     let nickName: String?
     let location: String?

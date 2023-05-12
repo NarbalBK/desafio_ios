@@ -16,9 +16,9 @@ final class HomeCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        let vc = HomeController()
-        let view = HomeView()
-        let viewModel = HomeViewModel(view: view, coordinator: self, repository: repository)
+        let vc = UserListController()
+        let view = UserListView()
+        let viewModel = UserListViewModel(view: view, coordinator: self, repository: repository)
         view.viewModelDelegate = viewModel
         vc.addView(view: view)
         navigationController.pushViewController(vc, animated: true)

@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  UserListView.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 11/05/23.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class HomeView: UIView {
+final class UserListView: UIView {
     
-    let reusableIdentifier = "HomeTableViewCell"
+    let reusableIdentifier = "UserListTableViewCell"
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModelDelegate: HomeViewModel?
+    var viewModelDelegate: UserListViewModel?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -27,7 +27,7 @@ final class HomeView: UIView {
     }
     
     func commomInit() {
-        Bundle.main.loadNibNamed("HomeView", owner: self)
+        Bundle.main.loadNibNamed("UserListView", owner: self)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -49,17 +49,17 @@ final class HomeView: UIView {
     }
 }
 
-extension HomeView: UITableViewDelegate, UITableViewDataSource {
+extension UserListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModelDelegate?.users.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as? UserListTableViewCell else { return UITableViewCell() }
         
         if let urlData = viewModelDelegate?.users[indexPath.row].url {
             cell.userDetailTask = viewModelDelegate?.getUserDetail(url: urlData) { userDetail in
-                cell.setCellData(data: HomeCellModel(data: userDetail))
+                cell.setCellData(data: UserListCellModel(data: userDetail))
             }
         }
         

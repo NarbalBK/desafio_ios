@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  UserListController.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 11/05/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeController: UIViewController {
+final class UserListController: UIViewController {
     
     let contentStackView: UIStackView = {
         let stack = UIStackView()

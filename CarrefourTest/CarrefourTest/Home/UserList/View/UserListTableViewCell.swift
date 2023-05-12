@@ -1,5 +1,5 @@
 //
-//  HomeTableViewCell.swift
+//  UserListTableViewCell.swift
 //  CarrefourTest
 //
 //  Created by Péricles Narbal on 11/05/23.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class HomeTableViewCell: UITableViewCell {
+final class UserListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cardContentView: UIView!
     
     var userDetailTask: URLSessionDataTask?
     var userImageTask: URLSessionDataTask?
     
-    var cellModel: HomeCellModel?
+    var cellModel: UserListCellModel?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -28,7 +28,7 @@ final class HomeTableViewCell: UITableViewCell {
         profileImageView.layer.cornerRadius = 20
     }
      
-    func setCellData(data: HomeCellModel) {
+    func setCellData(data: UserListCellModel) {
         cellModel = data
         DispatchQueue.main.async {
             self.fullNameLabel.text = data.fullName
