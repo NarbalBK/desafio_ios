@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct UserDetail: Decodable {
+struct UserDetailResponse: Decodable {
     let name: String?
     let login: String?
+    let bio: String?
+    let blog: String?
+    let email: String?
     let location: String?
     let public_repos: Int?
     let followers: Int?
+    let following: Int?
 }

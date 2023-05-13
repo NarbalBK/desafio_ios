@@ -71,4 +71,12 @@ extension UserListView: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? UserListTableViewCell
+        guard let urlData = viewModelDelegate?.users[indexPath.row].url else { return }
+        _ = viewModelDelegate?.getUserDetail(url: urlData) { [weak self] userDetail in
+            self?.viewModelDelegate?.goToUserProfile(profile: cell?.imageData, data: userDetail)
+        }
+    }
 }

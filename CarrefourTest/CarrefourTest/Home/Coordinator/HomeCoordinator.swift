@@ -23,4 +23,13 @@ final class HomeCoordinator: NSObject, Coordinator {
         vc.addView(view: view)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func goToUserProfile(data: UserProfileModel) {
+        let vc = UserProfileController()
+        let view = UserProfileView()
+        let viewModel = UserProfileViewModel(view: view, coordinator: self, repository: repository, data: data)
+        view.viewModelDelegate = viewModel
+        vc.addView(view: view)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

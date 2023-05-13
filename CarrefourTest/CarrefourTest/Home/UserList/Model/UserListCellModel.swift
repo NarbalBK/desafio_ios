@@ -30,7 +30,7 @@ struct UserListCellModel {
         self.followers = followers
     }
     
-    init(data: UserDetail) {
+    init(data: UserDetailResponse) {
         fullName = data.name
         nickName = data.login
         location = data.location

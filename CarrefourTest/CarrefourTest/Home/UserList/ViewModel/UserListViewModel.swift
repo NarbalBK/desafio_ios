@@ -14,7 +14,7 @@ final class UserListViewModel: NSObject {
     
     let repository: HomeRepository
     
-    var users: [User] = []
+    var users: [UserResponse] = []
     
     private let cache = NSCache<NSString, AnyObject>()
     
@@ -43,8 +43,8 @@ final class UserListViewModel: NSObject {
         }
     }
     
-    func getUserDetail(url: String, completion: @escaping (UserDetail) -> Void) -> URLSessionDataTask? {
-        if let cachedData = cache.object(forKey: url as NSString) as? UserDetail {
+    func getUserDetail(url: String, completion: @escaping (UserDetailResponse) -> Void) -> URLSessionDataTask? {
+        if let cachedData = cache.object(forKey: url as NSString) as? UserDetailResponse {
             completion(cachedData)
             return nil
         }
@@ -87,5 +87,10 @@ final class UserListViewModel: NSObject {
             print(error)
         }
         return nil
+    }
+    
+    func goToUserProfile(profile: Data?, data: UserDetailResponse) {
+        let userProfile = UserProfileModel(profile: profile, data: data)
+        coordinatorDelegate.goToUserProfile(data: userProfile)
     }
 }

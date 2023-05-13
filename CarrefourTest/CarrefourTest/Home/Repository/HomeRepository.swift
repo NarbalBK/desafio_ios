@@ -11,7 +11,7 @@ final class HomeRepository {
     let baseUrl = "https://api.github.com/"
     let unwrapError = NSError(domain: "Unwrap Error", code: -1)
     
-    func getUsers(completion: @escaping (Result<[User], Error>) -> Void) throws -> URLSessionDataTask {
+    func getUsers(completion: @escaping (Result<[UserResponse], Error>) -> Void) throws -> URLSessionDataTask {
         if let url = URL(string: baseUrl + "users") {
             let task = Network.fetchRequest(url: url) { result in
                 completion(result)
@@ -21,7 +21,7 @@ final class HomeRepository {
         throw unwrapError
     }
     
-    func getUserDetail(url: String, completion: @escaping (Result<UserDetail, Error>) -> Void) throws -> URLSessionDataTask {
+    func getUserDetail(url: String, completion: @escaping (Result<UserDetailResponse, Error>) -> Void) throws -> URLSessionDataTask {
         if let url = URL(string: url) {
             let task = Network.fetchRequest(url: url) { result in
                 completion(result)

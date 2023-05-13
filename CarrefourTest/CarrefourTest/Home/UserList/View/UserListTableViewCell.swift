@@ -15,6 +15,7 @@ final class UserListTableViewCell: UITableViewCell {
     var userImageTask: URLSessionDataTask?
     
     var cellModel: UserListCellModel?
+    var imageData: Data?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -40,6 +41,7 @@ final class UserListTableViewCell: UITableViewCell {
     }
     
     func setProfileImage(data: Data) {
+        imageData = data
         DispatchQueue.main.async {
             self.profileImageView.image = UIImage(data: data)
         }

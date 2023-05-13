@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Decodable {
+struct UserResponse: Decodable {
     let login: String?
     let url: String?
     let avatar_url: String?
