@@ -13,7 +13,7 @@ final class UserListViewModel: NSObject {
     unowned let coordinatorDelegate: HomeCoordinator
     
     let repository: HomeRepository
-    
+
     var users: [UserResponse] = []
     
     private let cache = NSCache<NSString, AnyObject>()
@@ -24,6 +24,7 @@ final class UserListViewModel: NSObject {
         self.repository = repository
         super.init()
         
+        view.viewModelDelegate = self
         getUsers()
     }
     

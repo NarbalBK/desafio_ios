@@ -27,7 +27,11 @@ final class UserListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profileImageView.layer.cornerRadius = 20
-        selectionStyle = .gray
+        selectionStyle = .none
+    }
+    
+    func startLoading() {
+        profileImageView.activityStartAnimating(activityColor: .gray, backgroundColor: .white)
     }
      
     func setCellData(data: UserListCellModel) {
@@ -45,6 +49,7 @@ final class UserListTableViewCell: UITableViewCell {
         imageData = data
         DispatchQueue.main.async {
             self.profileImageView.image = UIImage(data: data)
+            self.profileImageView.activityStopAnimating()
         }
     }
 
@@ -61,5 +66,7 @@ final class UserListTableViewCell: UITableViewCell {
         
         userDetailTask = nil
         userImageTask = nil
+        
+        self.profileImageView.activityStopAnimating()
     }
 }

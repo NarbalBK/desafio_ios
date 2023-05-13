@@ -22,6 +22,7 @@
 		B7B88CE42A0F29FA00372CD8 /* ReposListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CE22A0F29FA00372CD8 /* ReposListTableViewCell.swift */; };
 		B7B88CE52A0F29FA00372CD8 /* ReposListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7B88CE32A0F29FA00372CD8 /* ReposListTableViewCell.xib */; };
 		B7B88CE72A0FBB2E00372CD8 /* SearchUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CE62A0FBB2E00372CD8 /* SearchUserResponse.swift */; };
+		B7B88CED2A1002B800372CD8 /* ControllerLifeCicleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CEC2A1002B800372CD8 /* ControllerLifeCicleDelegate.swift */; };
 		B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D092A0D85C700538DC9 /* AppDelegate.swift */; };
 		B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */; };
 		B7C45D0E2A0D85C700538DC9 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0D2A0D85C700538DC9 /* UserListController.swift */; };
@@ -40,6 +41,8 @@
 		B7EEDCBA2A0DC57F003816A8 /* UserListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCB92A0DC57F003816A8 /* UserListCellModel.swift */; };
 		B7EEDCBF2A0E6986003816A8 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCBE2A0E6986003816A8 /* UserListViewModel.swift */; };
 		B7EEDCC12A0E6F79003816A8 /* UserDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EEDCC02A0E6F79003816A8 /* UserDetailResponse.swift */; };
+		B7FF76912A10144B00B20257 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FF76902A10144B00B20257 /* ActivityIndicatorView.swift */; };
+		B7FF76932A10145700B20257 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FF76922A10145700B20257 /* ActivityIndicatorView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,7 @@
 		B7B88CE22A0F29FA00372CD8 /* ReposListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListTableViewCell.swift; sourceTree = "<group>"; };
 		B7B88CE32A0F29FA00372CD8 /* ReposListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListTableViewCell.xib; sourceTree = "<group>"; };
 		B7B88CE62A0FBB2E00372CD8 /* SearchUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResponse.swift; sourceTree = "<group>"; };
+		B7B88CEC2A1002B800372CD8 /* ControllerLifeCicleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerLifeCicleDelegate.swift; sourceTree = "<group>"; };
 		B7C45D062A0D85C700538DC9 /* CarrefourTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrefourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C45D092A0D85C700538DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		B7EEDCB92A0DC57F003816A8 /* UserListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCellModel.swift; sourceTree = "<group>"; };
 		B7EEDCBE2A0E6986003816A8 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		B7EEDCC02A0E6F79003816A8 /* UserDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailResponse.swift; sourceTree = "<group>"; };
+		B7FF76902A10144B00B20257 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B7FF76922A10145700B20257 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B733EC4A2A0ED7CE005B00D1 /* BaseViewController.swift */,
+				B7B88CEC2A1002B800372CD8 /* ControllerLifeCicleDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,9 +153,9 @@
 		B733EC4F2A0ED912005B00D1 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				B7B88CCD2A0EF06500372CD8 /* Model */,
 				B7B88CC82A0EDB8400372CD8 /* ViewModel */,
 				B7B88CC52A0EDB3E00372CD8 /* View */,
+				B7B88CCD2A0EF06500372CD8 /* Model */,
 				B7B88CC22A0EDAB900372CD8 /* Controller */,
 			);
 			path = UserProfile;
@@ -198,9 +205,9 @@
 		B7B88CD32A0F152D00372CD8 /* ReposList */ = {
 			isa = PBXGroup;
 			children = (
-				B7B88CD92A0F184900372CD8 /* Model */,
 				B7B88CD82A0F184000372CD8 /* ViewModel */,
 				B7B88CD72A0F183900372CD8 /* View */,
+				B7B88CD92A0F184900372CD8 /* Model */,
 				B7B88CD42A0F16AB00372CD8 /* Controller */,
 			);
 			path = ReposList;
@@ -240,6 +247,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B7B88CF32A10139D00372CD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7FF768F2A10142800B20257 /* Active */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B7C45CFD2A0D85C700538DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -262,10 +277,11 @@
 		B7C45D082A0D85C700538DC9 /* CarrefourTest */ = {
 			isa = PBXGroup;
 			children = (
-				B733EC492A0ED7BD005B00D1 /* Controller */,
 				B7EEDCA42A0D9198003816A8 /* Network */,
 				B7C45D392A0D8B3400538DC9 /* Coordinator */,
 				B7B88CD02A0F09EB00372CD8 /* Extension */,
+				B7B88CF32A10139D00372CD8 /* View */,
+				B733EC492A0ED7BD005B00D1 /* Controller */,
 				B7EEDCAE2A0DB4ED003816A8 /* Home */,
 				B7C45D092A0D85C700538DC9 /* AppDelegate.swift */,
 				B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */,
@@ -373,6 +389,15 @@
 				B7EEDCAD2A0DB48A003816A8 /* Controller */,
 			);
 			path = UserList;
+			sourceTree = "<group>";
+		};
+		B7FF768F2A10142800B20257 /* Active */ = {
+			isa = PBXGroup;
+			children = (
+				B7FF76902A10144B00B20257 /* ActivityIndicatorView.swift */,
+				B7FF76922A10145700B20257 /* ActivityIndicatorView.xib */,
+			);
+			path = Active;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +511,7 @@
 				B7B88CDF2A0F198A00372CD8 /* ReposListView.xib in Resources */,
 				B7EEDCB42A0DB6A5003816A8 /* UserListView.xib in Resources */,
 				B7B88CE52A0F29FA00372CD8 /* ReposListTableViewCell.xib in Resources */,
+				B7FF76932A10145700B20257 /* ActivityIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,12 +544,14 @@
 				B7B88CD62A0F16C700372CD8 /* ReposListController.swift in Sources */,
 				B7C45D0E2A0D85C700538DC9 /* UserListController.swift in Sources */,
 				B733EC4B2A0ED7CE005B00D1 /* BaseViewController.swift in Sources */,
+				B7B88CED2A1002B800372CD8 /* ControllerLifeCicleDelegate.swift in Sources */,
 				B7B88CDB2A0F187900372CD8 /* ReposListView.swift in Sources */,
 				B7EEDCA62A0D91BE003816A8 /* Network.swift in Sources */,
 				B7B88CE12A0F1CEC00372CD8 /* RepositoryResponse.swift in Sources */,
 				B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */,
 				B7EEDCC12A0E6F79003816A8 /* UserDetailResponse.swift in Sources */,
 				B7B88CCF2A0EF07E00372CD8 /* UserProfileModel.swift in Sources */,
+				B7FF76912A10144B00B20257 /* ActivityIndicatorView.swift in Sources */,
 				B7EEDCBF2A0E6986003816A8 /* UserListViewModel.swift in Sources */,
 				B7B88CC72A0EDB5F00372CD8 /* UserProfileView.swift in Sources */,
 				B7B88CD22A0F0A2800372CD8 /* UIViewExtension.swift in Sources */,

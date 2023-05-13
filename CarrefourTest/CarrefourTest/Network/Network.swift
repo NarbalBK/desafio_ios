@@ -20,7 +20,7 @@ final class Network {
             }
             
             if let response = response as? HTTPURLResponse {
-                print("Status code: \(response.statusCode) \(response.url?.absoluteString) ")
+                print("STATUS CODE: \(response.statusCode) \(response.url?.absoluteString)")
             }
             
             if let data = data {

@@ -14,6 +14,7 @@ final class UserListView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableMessageLabel: UILabel!
     
     var viewModelDelegate: UserListViewModel?
     
@@ -47,6 +48,7 @@ final class UserListView: UIView {
     func reloadData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.tableMessageLabel.isHidden = !(self.viewModelDelegate?.users.isEmpty ?? false)
         }
     }
 }
@@ -58,6 +60,8 @@ extension UserListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier, for: indexPath) as? UserListTableViewCell else { return UITableViewCell() }
+        
+        cell.startLoading()
         
         if let urlData = viewModelDelegate?.users[indexPath.row].url {
             cell.userDetailTask = viewModelDelegate?.getUserDetail(url: urlData) { userDetail in
@@ -85,6 +89,6 @@ extension UserListView: UITableViewDelegate, UITableViewDataSource {
 
 extension UserListView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModelDelegate?.getSomeUser(name: formattedText)
+        viewModelDelegate?.getSomeUser(name: searchText)
     }
 }

@@ -20,6 +20,7 @@ final class UserProfileViewModel: NSObject {
         viewData = data
         super.init()
         
+        view.viewModelDelegate = self
         fillViewWithData()
     }
     

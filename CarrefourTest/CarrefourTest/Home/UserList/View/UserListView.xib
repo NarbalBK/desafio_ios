@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="lUC-P3-Dgc"/>
                 <outlet property="searchBar" destination="v6R-W8-8WW" id="LoQ-MA-1ek"/>
+                <outlet property="tableMessageLabel" destination="OC2-PK-rSe" id="xUb-vQ-Ka8"/>
                 <outlet property="tableView" destination="5fT-2p-eHW" id="Per-ot-K1t"/>
             </connections>
         </placeholder>
@@ -28,14 +29,24 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhum usuário foi encontrado." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC2-PK-rSe">
+                    <rect key="frame" x="38" y="274" width="244" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="v6R-W8-8WW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3wc-Z0-Hnt"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4y9-f7-Pak"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OC2-PK-rSe" secondAttribute="trailing" constant="24" id="AT6-VB-M32"/>
+                <constraint firstItem="OC2-PK-rSe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GYs-rZ-ZHL"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Kjy-6Y-bQn"/>
                 <constraint firstItem="v6R-W8-8WW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NRt-NF-MSU"/>
+                <constraint firstItem="OC2-PK-rSe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WRm-bB-viO"/>
+                <constraint firstItem="OC2-PK-rSe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="XJR-31-cOw"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="top" secondItem="v6R-W8-8WW" secondAttribute="bottom" id="cqh-Re-MMJ"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eum-Og-Jhw"/>
                 <constraint firstItem="v6R-W8-8WW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vFC-5V-A7C"/>

@@ -9,7 +9,7 @@ import Foundation
 
 final class HomeRepository {
     let baseUrl = "https://api.github.com/"
-    let token = "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"
+    let token = "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"
     
     let unwrapError = NSError(domain: "Unwrap Error", code: -1)
     

@@ -14,6 +14,8 @@ final class ReposListView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    var activityView: ActivityIndicatorView?
+    
     var viewModelDelegate: ReposListViewModel?
     
     override init(frame: CGRect) {
@@ -46,6 +48,17 @@ final class ReposListView: UIView {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func addActivity() {
+        activityView = ActivityIndicatorView()
+        activityView?.frame = UIScreen.main.bounds
+        activityView?.addActivity()
+    }
+    
+    func removeActivity() {
+        activityView?.removeActivy()
+        activityView = nil
     }
 }
  

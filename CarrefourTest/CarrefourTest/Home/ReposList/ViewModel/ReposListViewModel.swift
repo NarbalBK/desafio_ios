@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ReposListViewModel: NSObject {
+final class ReposListViewModel: NSObject, ControllerLifeCicleDelegate {
     
     unowned let view: ReposListView
     unowned let coordinatorDelegate: HomeCoordinator
@@ -24,13 +24,19 @@ final class ReposListViewModel: NSObject {
         self.profileData = data
         super.init()
         
-        if let url = data.repos_url {
+        view.viewModelDelegate = self
+    }
+    
+    func viewDidLoad() {
+        if let url = profileData.repos_url {
             getRepositories(url: url)
         }
     }
     
     func getRepositories(url: String) {
+        view.addActivity()
         _ = repository.getRepositories(url: url) { [weak self] result in
+            self?.view.removeActivity()
             switch result {
             case .success(let listRepositories):
                 self?.listRepositories = listRepositories
