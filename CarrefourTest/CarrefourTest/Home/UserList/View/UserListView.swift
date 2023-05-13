@@ -13,6 +13,7 @@ final class UserListView: UIView {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var viewModelDelegate: UserListViewModel?
     
@@ -38,6 +39,7 @@ final class UserListView: UIView {
     private func setupView() {
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         
         tableView.register(UINib(nibName: reusableIdentifier, bundle: nil), forCellReuseIdentifier: reusableIdentifier)
     }
@@ -78,5 +80,11 @@ extension UserListView: UITableViewDelegate, UITableViewDataSource {
         _ = viewModelDelegate?.getUserDetail(url: urlData) { [weak self] userDetail in
             self?.viewModelDelegate?.goToUserProfile(profile: cell?.imageData, data: userDetail)
         }
+    }
+}
+
+extension UserListView: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModelDelegate?.getSomeUser(name: formattedText)
     }
 }

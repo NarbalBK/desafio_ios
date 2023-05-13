@@ -28,18 +28,41 @@ final class UserListViewModel: NSObject {
     }
     
     func getUsers() {
-        do {
-            _ = try repository.getUsers { [weak self] result in
-                switch result {
-                case .success(let users):
-                    self?.users = users
-                    self?.view.reloadData()
-                case .failure(let error):
-                    print(error)
-                }
+        _ = repository.getUsers { [weak self] result in
+            switch result {
+            case .success(let users):
+                self?.users = users
+                self?.view.reloadData()
+            case .failure(let error):
+                print(error)
             }
-        } catch {
-            print(error)
+        }
+    }
+    
+    func getSomeUser(name: String) {
+        if name.count < 3 || name.count > 30 {
+            return
+        }
+        
+        let formattedName = name.trimmingCharacters(in: .whitespaces)
+            .folding(options: .diacriticInsensitive, locale: .current)
+            .replacingOccurrences(of: " ", with: "_")
+        
+        if let cachedData = cache.object(forKey: formattedName as NSString) as? [UserResponse] {
+            users = cachedData
+            view.reloadData()
+            return
+        }
+        
+        _ = repository.getSomeUserBy(name: formattedName) { [weak self] result in
+            switch result {
+            case .success(let search):
+                self?.cache.setObject(search.items as AnyObject, forKey: formattedName as NSString)
+                self?.users = search.items
+                self?.view.reloadData()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
@@ -49,21 +72,16 @@ final class UserListViewModel: NSObject {
             return nil
         }
         
-        do {
-            let task = try repository.getUserDetail(url: url) { [weak self] result in
-                switch result {
-                case .success(let userDetail):
-                    self?.cache.setObject(userDetail as AnyObject, forKey: url as NSString)
-                    completion(userDetail)
-                case .failure(let error):
-                    print(error)
-                }
+        let task = repository.getUserDetail(url: url) { [weak self] result in
+            switch result {
+            case .success(let userDetail):
+                self?.cache.setObject(userDetail as AnyObject, forKey: url as NSString)
+                completion(userDetail)
+            case .failure(let error):
+                print(error)
             }
-            return task
-        } catch {
-            print(error)
         }
-        return nil
+        return task
     }
     
     func getImageProfile(url: String, completion: @escaping (Data) -> Void) -> URLSessionDataTask? {
@@ -72,21 +90,16 @@ final class UserListViewModel: NSObject {
             return nil
         }
         
-        do {
-            let task = try repository.getImageProfile(url: url) { [weak self] result in
-                switch result {
-                case .success(let imageData):
-                    self?.cache.setObject(NSData(data: imageData), forKey: url as NSString)
-                    completion(imageData)
-                case .failure(let error):
-                    print(error)
-                }
+        let task = repository.getImageProfile(url: url) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.cache.setObject(NSData(data: imageData), forKey: url as NSString)
+                completion(imageData)
+            case .failure(let error):
+                print(error)
             }
-            return task
-        } catch {
-            print(error)
         }
-        return nil
+        return task
     }
     
     func goToUserProfile(profile: Data?, data: UserDetailResponse) {

@@ -9,11 +9,18 @@ import Foundation
 
 final class Network {
     
-    static func fetchRequestData(url: URL, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask {
+    static func fetchRequestData(url: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask {
         let session = URLSession.shared
         let task = session.dataTask(with: url) { data, response, error in
+            
+            
+            
             if let error = error {
                 completion(.failure(error))
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Status code: \(response.statusCode) \(response.url?.absoluteString) ")
             }
             
             if let data = data {
@@ -24,7 +31,7 @@ final class Network {
         return task
     }
     
-    static func fetchRequest<T: Decodable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask {
+    static func fetchRequest<T: Decodable>(url: URLRequest, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask {
        
         let task = fetchRequestData(url: url) { result in
             do {

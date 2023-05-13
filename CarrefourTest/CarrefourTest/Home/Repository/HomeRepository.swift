@@ -9,44 +9,83 @@ import Foundation
 
 final class HomeRepository {
     let baseUrl = "https://api.github.com/"
+    let token = "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"
+    
     let unwrapError = NSError(domain: "Unwrap Error", code: -1)
     
-    func getUsers(completion: @escaping (Result<[UserResponse], Error>) -> Void) throws -> URLSessionDataTask {
-        if let url = URL(string: baseUrl + "users") {
-            let task = Network.fetchRequest(url: url) { result in
+    func getUsers(completion: @escaping (Result<[UserResponse], Error>) -> Void) -> URLSessionDataTask? {
+        let url = baseUrl + "users"
+        
+        do {
+            let urlRequest = try buildRequest(url: url)
+            let task = Network.fetchRequest(url: urlRequest) { result in
                 completion(result)
             }
             return task
+        } catch {
+            completion(.failure(error))
+            return nil
         }
-        throw unwrapError
     }
     
-    func getUserDetail(url: String, completion: @escaping (Result<UserDetailResponse, Error>) -> Void) throws -> URLSessionDataTask {
-        if let url = URL(string: url) {
-            let task = Network.fetchRequest(url: url) { result in
+    func getUserDetail(url: String, completion: @escaping (Result<UserDetailResponse, Error>) -> Void) -> URLSessionDataTask? {
+        do {
+            let urlRequest = try buildRequest(url: url)
+            let task = Network.fetchRequest(url: urlRequest) { result in
                 completion(result)
             }
             return task
+        } catch {
+            completion(.failure(error))
+            return nil
         }
-        throw unwrapError
     }
     
-    func getRepositories(url: String, completion: @escaping (Result<[RepositoryResponse], Error>) -> Void) throws -> URLSessionDataTask {
-        if let url = URL(string: url) {
-            let task = Network.fetchRequest(url: url) { result in
+    func getRepositories(url: String, completion: @escaping (Result<[RepositoryResponse], Error>) -> Void) -> URLSessionDataTask? {
+        do {
+            let urlRequest = try buildRequest(url: url)
+            let task = Network.fetchRequest(url: urlRequest) { result in
                 completion(result)
             }
             return task
+        } catch {
+            completion(.failure(error))
+            return nil
         }
-        throw unwrapError
     }
     
-    func getImageProfile(url: String, completion: @escaping (Result<Data, Error>) -> Void) throws -> URLSessionDataTask {
-        if let url = URL(string: url) {
-            let task = Network.fetchRequestData(url: url) { result in
+    func getSomeUserBy(name: String, completion: @escaping (Result<SearchUserResponse, Error>) -> Void) -> URLSessionDataTask? {
+        let url = baseUrl + "search/users?q=\(name)"
+        do {
+            let urlRequest = try buildRequest(url: url)
+            let task = Network.fetchRequest(url: urlRequest) { result in
                 completion(result)
             }
             return task
+        } catch {
+            completion(.failure(error))
+            return nil
+        }
+    }
+    
+    func getImageProfile(url: String, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask? {
+        do {
+            let urlRequest = try buildRequest(url: url)
+            let task = Network.fetchRequestData(url: urlRequest) { result in
+                completion(result)
+            }
+            return task
+        } catch {
+            completion(.failure(error))
+            return nil
+        }
+    }
+    
+    func buildRequest(url: String) throws -> URLRequest {
+        if let url = URL(string: url) {
+            var request = URLRequest(url: url)
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            return request
         }
         throw unwrapError
     }

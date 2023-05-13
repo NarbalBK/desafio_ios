@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserListView" customModule="CarrefourTest" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="lUC-P3-Dgc"/>
+                <outlet property="searchBar" destination="v6R-W8-8WW" id="LoQ-MA-1ek"/>
                 <outlet property="tableView" destination="5fT-2p-eHW" id="Per-ot-K1t"/>
             </connections>
         </placeholder>
@@ -20,17 +21,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-2p-eHW">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="v6R-W8-8WW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="v6R-W8-8WW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3wc-Z0-Hnt"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4y9-f7-Pak"/>
-                <constraint firstItem="5fT-2p-eHW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JZp-dF-Rxp"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Kjy-6Y-bQn"/>
+                <constraint firstItem="v6R-W8-8WW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NRt-NF-MSU"/>
+                <constraint firstItem="5fT-2p-eHW" firstAttribute="top" secondItem="v6R-W8-8WW" secondAttribute="bottom" id="cqh-Re-MMJ"/>
                 <constraint firstItem="5fT-2p-eHW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eum-Og-Jhw"/>
+                <constraint firstItem="v6R-W8-8WW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vFC-5V-A7C"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131.25" y="-11.619718309859156"/>

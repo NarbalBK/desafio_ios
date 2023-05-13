@@ -21,6 +21,7 @@
 		B7B88CE12A0F1CEC00372CD8 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CE02A0F1CEC00372CD8 /* RepositoryResponse.swift */; };
 		B7B88CE42A0F29FA00372CD8 /* ReposListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CE22A0F29FA00372CD8 /* ReposListTableViewCell.swift */; };
 		B7B88CE52A0F29FA00372CD8 /* ReposListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7B88CE32A0F29FA00372CD8 /* ReposListTableViewCell.xib */; };
+		B7B88CE72A0FBB2E00372CD8 /* SearchUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B88CE62A0FBB2E00372CD8 /* SearchUserResponse.swift */; };
 		B7C45D0A2A0D85C700538DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D092A0D85C700538DC9 /* AppDelegate.swift */; };
 		B7C45D0C2A0D85C700538DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */; };
 		B7C45D0E2A0D85C700538DC9 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C45D0D2A0D85C700538DC9 /* UserListController.swift */; };
@@ -73,6 +74,7 @@
 		B7B88CE02A0F1CEC00372CD8 /* RepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
 		B7B88CE22A0F29FA00372CD8 /* ReposListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListTableViewCell.swift; sourceTree = "<group>"; };
 		B7B88CE32A0F29FA00372CD8 /* ReposListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListTableViewCell.xib; sourceTree = "<group>"; };
+		B7B88CE62A0FBB2E00372CD8 /* SearchUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserResponse.swift; sourceTree = "<group>"; };
 		B7C45D062A0D85C700538DC9 /* CarrefourTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrefourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C45D092A0D85C700538DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C45D0B2A0D85C700538DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				B7EEDCA82A0D981E003816A8 /* UserResponse.swift */,
 				B7EEDCC02A0E6F79003816A8 /* UserDetailResponse.swift */,
 				B7B88CE02A0F1CEC00372CD8 /* RepositoryResponse.swift */,
+				B7B88CE62A0FBB2E00372CD8 /* SearchUserResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				B7EEDCBF2A0E6986003816A8 /* UserListViewModel.swift in Sources */,
 				B7B88CC72A0EDB5F00372CD8 /* UserProfileView.swift in Sources */,
 				B7B88CD22A0F0A2800372CD8 /* UIViewExtension.swift in Sources */,
+				B7B88CE72A0FBB2E00372CD8 /* SearchUserResponse.swift in Sources */,
 				B7B88CDD2A0F188E00372CD8 /* ReposListViewModel.swift in Sources */,
 				B7EEDCB72A0DBCEF003816A8 /* UserListTableViewCell.swift in Sources */,
 				B7C45D3D2A0D8BA200538DC9 /* HomeCoordinator.swift in Sources */,

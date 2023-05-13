@@ -30,18 +30,14 @@ final class ReposListViewModel: NSObject {
     }
     
     func getRepositories(url: String) {
-        do {
-            _ = try repository.getRepositories(url: url) { [weak self] result in
-                switch result {
-                case .success(let listRepositories):
-                    self?.listRepositories = listRepositories
-                    self?.view.reloadData()
-                case .failure(let error):
-                    print(error)
-                }
+        _ = repository.getRepositories(url: url) { [weak self] result in
+            switch result {
+            case .success(let listRepositories):
+                self?.listRepositories = listRepositories
+                self?.view.reloadData()
+            case .failure(let error):
+                print(error)
             }
-        } catch {
-            print(error)
         }
     }
 }
