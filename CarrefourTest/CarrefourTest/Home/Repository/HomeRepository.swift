@@ -31,6 +31,16 @@ final class HomeRepository {
         throw unwrapError
     }
     
+    func getRepositories(url: String, completion: @escaping (Result<[RepositoryResponse], Error>) -> Void) throws -> URLSessionDataTask {
+        if let url = URL(string: url) {
+            let task = Network.fetchRequest(url: url) { result in
+                completion(result)
+            }
+            return task
+        }
+        throw unwrapError
+    }
+    
     func getImageProfile(url: String, completion: @escaping (Result<Data, Error>) -> Void) throws -> URLSessionDataTask {
         if let url = URL(string: url) {
             let task = Network.fetchRequestData(url: url) { result in

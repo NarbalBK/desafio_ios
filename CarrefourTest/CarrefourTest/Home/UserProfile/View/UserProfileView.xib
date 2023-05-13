@@ -363,6 +363,7 @@
                 <constraint firstItem="nUw-NE-6fc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="s5c-ku-pXo"/>
                 <constraint firstItem="CcT-ko-Fs0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ugm-TW-F67"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="78.75" y="-11.619718309859156"/>
         </view>
     </objects>

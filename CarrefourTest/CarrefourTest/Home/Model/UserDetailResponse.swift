@@ -14,6 +14,7 @@ struct UserDetailResponse: Decodable {
     let blog: String?
     let email: String?
     let location: String?
+    let repos_url: String?
     let public_repos: Int?
     let followers: Int?
     let following: Int?

@@ -9,7 +9,6 @@ import UIKit
 
 extension UIView {
     func applyCardShadow() {
-        layer.cornerRadius = 20
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.2
         layer.shadowOffset = CGSize(width: 0, height: 2)

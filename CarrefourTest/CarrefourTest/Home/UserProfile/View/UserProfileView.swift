@@ -37,7 +37,6 @@ final class UserProfileView: UIView {
         commomInit()
     }
     
-    
     func commomInit() {
         Bundle.main.loadNibNamed("UserProfileView", owner: self)
         addSubview(contentView)
@@ -49,6 +48,7 @@ final class UserProfileView: UIView {
     
     private func setupView() {
         profileImageView.layer.cornerRadius = 64
+        cardContentView.layer.cornerRadius = 20
         cardContentView.applyCardShadow()
     }
     
@@ -77,7 +77,7 @@ final class UserProfileView: UIView {
     }
     
     @IBAction func repositoriesButtonAction(_ sender: Any) {
-        print("REPOSITORIES")
+        viewModelDelegate?.goToReposityList()
     }
 
 }

@@ -27,6 +27,7 @@ final class UserListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profileImageView.layer.cornerRadius = 20
+        selectionStyle = .gray
     }
      
     func setCellData(data: UserListCellModel) {

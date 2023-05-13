@@ -27,7 +27,16 @@ final class HomeCoordinator: NSObject, Coordinator {
     func goToUserProfile(data: UserProfileModel) {
         let vc = UserProfileController()
         let view = UserProfileView()
-        let viewModel = UserProfileViewModel(view: view, coordinator: self, repository: repository, data: data)
+        let viewModel = UserProfileViewModel(view: view, coordinator: self, data: data)
+        view.viewModelDelegate = viewModel
+        vc.addView(view: view)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToRepositoryList(data: UserProfileModel) {
+        let vc = ReposListController()
+        let view = ReposListView()
+        let viewModel = ReposListViewModel(view: view, coordinator: self, repository: repository, data: data)
         view.viewModelDelegate = viewModel
         vc.addView(view: view)
         navigationController.pushViewController(vc, animated: true)

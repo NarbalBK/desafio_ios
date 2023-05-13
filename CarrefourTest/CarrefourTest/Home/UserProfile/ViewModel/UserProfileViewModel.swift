@@ -12,13 +12,11 @@ final class UserProfileViewModel: NSObject {
     unowned let view: UserProfileView
     unowned let coordinatorDelegate: HomeCoordinator
     
-    let repository: HomeRepository
     let viewData: UserProfileModel
     
-    init (view: UserProfileView, coordinator: HomeCoordinator, repository: HomeRepository, data: UserProfileModel) {
+    init (view: UserProfileView, coordinator: HomeCoordinator, data: UserProfileModel) {
         self.view = view
         coordinatorDelegate = coordinator
-        self.repository = repository
         viewData = data
         super.init()
         
@@ -27,5 +25,9 @@ final class UserProfileViewModel: NSObject {
     
     func fillViewWithData() {
         view.setViewData(data: viewData)
+    }
+    
+    func goToReposityList() {
+        coordinatorDelegate.goToRepositoryList(data: viewData)
     }
 }
