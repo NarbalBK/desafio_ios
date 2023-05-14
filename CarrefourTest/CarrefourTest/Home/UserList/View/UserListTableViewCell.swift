@@ -35,7 +35,7 @@ final class UserListTableViewCell: UITableViewCell, UserListTableViewCellProtoco
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        profileImageView.layer.cornerRadius = 20
+        profileImageView.layer.cornerRadius = 25
         selectionStyle = .none
     }
     
