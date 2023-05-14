@@ -7,17 +7,26 @@
 
 import UIKit
 
-final class ReposListViewModel: NSObject, ControllerLifeCicleDelegate {
+protocol ReposListViewModelDelegate: NSObject {
+    var view: ReposListViewDelegate { get }
+    var coordinatorDelegate: HomeCoordinatorDelegate { get }
+    var repository: HomeRepositoryProtocol { get }
+    var listRepositories: [RepositoryResponse] { get set }
     
-    unowned let view: ReposListView
-    unowned let coordinatorDelegate: HomeCoordinator
+    func getRepositories(url: String)
+}
+
+final class ReposListViewModel: NSObject, ReposListViewModelDelegate, ControllerLifeCicleDelegate {
     
-    let repository: HomeRepository
+    unowned let view: ReposListViewDelegate
+    unowned let coordinatorDelegate: HomeCoordinatorDelegate
+    
+    let repository: HomeRepositoryProtocol
     let profileData: UserProfileModel
     
     var listRepositories: [RepositoryResponse] = []
     
-    init (view: ReposListView, coordinator: HomeCoordinator, repository: HomeRepository, data: UserProfileModel) {
+    init (view: ReposListViewDelegate, coordinator: HomeCoordinatorDelegate, repository: HomeRepositoryProtocol, data: UserProfileModel) {
         self.view = view
         coordinatorDelegate = coordinator
         self.repository = repository

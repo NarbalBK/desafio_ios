@@ -7,9 +7,18 @@
 
 import Foundation
 
-final class HomeRepository {
+protocol HomeRepositoryProtocol {
+    func getUsers(completion: @escaping (Result<[UserResponse], Error>) -> Void) -> URLSessionDataTask?
+    func getUserDetail(url: String, completion: @escaping (Result<UserDetailResponse, Error>) -> Void) -> URLSessionDataTask?
+    func getRepositories(url: String, completion: @escaping (Result<[RepositoryResponse], Error>) -> Void) -> URLSessionDataTask?
+    func getSomeUserBy(name: String, completion: @escaping (Result<SearchUserResponse, Error>) -> Void) -> URLSessionDataTask?
+    func getImageProfile(url: String, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask?
+    func buildRequest(url: String) throws -> URLRequest
+}
+
+final class HomeRepository: HomeRepositoryProtocol {
     let baseUrl = "https://api.github.com/"
-    let token = "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"
+    let token = "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"
     
     let unwrapError = NSError(domain: "Unwrap Error", code: -1)
     

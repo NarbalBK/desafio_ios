@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol HomeCoordinatorDelegate: NSObject {
+    func goToUserProfile(data: UserProfileModel)
+    func goToRepositoryList(data: UserProfileModel)
+}
+
 final class HomeCoordinator: NSObject, Coordinator {
     var navigationController: UINavigationController
     let repository = HomeRepository()
@@ -21,7 +26,9 @@ final class HomeCoordinator: NSObject, Coordinator {
         let vc = UserListController(view: view)
         navigationController.pushViewController(vc, animated: true)
     }
-    
+}
+
+extension HomeCoordinator: HomeCoordinatorDelegate {
     func goToUserProfile(data: UserProfileModel) {
         let view = UserProfileView()
         let _ = UserProfileViewModel(view: view, coordinator: self, data: data)

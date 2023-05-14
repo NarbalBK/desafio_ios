@@ -7,16 +7,23 @@
 
 import UIKit
 
-final class ReposListView: UIView {
+protocol ReposListViewDelegate: NSObject {
+    var viewModelDelegate: ReposListViewModelDelegate? { get set }
     
-    let reusableIdentifier = "ReposListTableViewCell"
+    func reloadData()
+    func addActivity()
+    func removeActivity()
+}
+
+final class ReposListView: UIView, ReposListViewDelegate {
+    
+    private let reusableIdentifier = "ReposListTableViewCell"
+    private var activityView: ActivityIndicatorView?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var activityView: ActivityIndicatorView?
-    
-    var viewModelDelegate: ReposListViewModel?
+    var viewModelDelegate: ReposListViewModelDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -28,7 +35,7 @@ final class ReposListView: UIView {
         commomInit()
     }
     
-    func commomInit() {
+    private func commomInit() {
         Bundle.main.loadNibNamed("ReposListView", owner: self)
         addSubview(contentView)
         contentView.frame = self.bounds

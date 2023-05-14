@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ReposListTableViewCell: UITableViewCell {
+protocol ReposListTableViewCellProtocol: NSObject {
+    func setCellData(data: RepositoryResponse)
+}
+
+class ReposListTableViewCell: UITableViewCell, ReposListTableViewCellProtocol {
 
     @IBOutlet weak var contentStackView: UIStackView!
     
@@ -20,9 +24,9 @@ class ReposListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         repositoryCardLanguageView.layer.cornerRadius = 8
         repositoryCardLanguageView.applyCardShadow()
+        selectionStyle = .none
     }
     
     func setCellData(data: RepositoryResponse) {
@@ -40,7 +44,7 @@ class ReposListTableViewCell: UITableViewCell {
         contentStackView.arrangedSubviews.forEach { $0.isHidden = false }
     }
     
-    func hideEmptyValues() {
+    private func hideEmptyValues() {
         arrayLabel.forEach { label in
             if label.text == nil ||
                 label.text == "" {

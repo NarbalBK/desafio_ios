@@ -7,7 +7,13 @@
 
 import UIKit
 
-final class UserProfileView: UIView {
+protocol UserProfileViewDelegate: NSObject {
+    var viewModelDelegate: UserProfileViewModelDelegate? { get set }
+    
+    func setViewData(data: UserProfileModel)
+}
+
+final class UserProfileView: UIView, UserProfileViewDelegate {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var cardContentView: UIView!
@@ -25,7 +31,7 @@ final class UserProfileView: UIView {
     
     @IBOutlet var labelArray: [UILabel]!
     
-    var viewModelDelegate: UserProfileViewModel?
+    var viewModelDelegate: UserProfileViewModelDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -37,7 +43,7 @@ final class UserProfileView: UIView {
         commomInit()
     }
     
-    func commomInit() {
+    private func commomInit() {
         Bundle.main.loadNibNamed("UserProfileView", owner: self)
         addSubview(contentView)
         contentView.frame = self.bounds
@@ -52,7 +58,7 @@ final class UserProfileView: UIView {
         cardContentView.applyCardShadow()
     }
     
-    func hideEmptyValues() {
+    private func hideEmptyValues() {
         labelArray.forEach { label in
             if label.text == nil ||
                 label.text == "" {

@@ -7,14 +7,23 @@
 
 import Foundation
 
-final class UserProfileViewModel: NSObject {
+protocol UserProfileViewModelDelegate: NSObject {
+    var view: UserProfileViewDelegate { get }
+    var coordinatorDelegate: HomeCoordinatorDelegate { get }
+    var viewData: UserProfileModel { get }
     
-    unowned let view: UserProfileView
-    unowned let coordinatorDelegate: HomeCoordinator
+    func fillViewWithData()
+    func goToReposityList()
+}
+
+final class UserProfileViewModel: NSObject, UserProfileViewModelDelegate {
+    
+    unowned let view: UserProfileViewDelegate
+    unowned let coordinatorDelegate: HomeCoordinatorDelegate
     
     let viewData: UserProfileModel
     
-    init (view: UserProfileView, coordinator: HomeCoordinator, data: UserProfileModel) {
+    init (view: UserProfileViewDelegate, coordinator: HomeCoordinatorDelegate, data: UserProfileModel) {
         self.view = view
         coordinatorDelegate = coordinator
         viewData = data

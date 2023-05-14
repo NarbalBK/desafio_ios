@@ -7,7 +7,13 @@
 
 import UIKit
 
-final class UserListView: UIView {
+protocol UserListViewDelegate: NSObject {
+    var viewModelDelegate: UserListViewModelDelegate? { get set }
+    
+    func reloadData()
+}
+
+final class UserListView: UIView, UserListViewDelegate {
     
     let reusableIdentifier = "UserListTableViewCell"
     
@@ -16,7 +22,7 @@ final class UserListView: UIView {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableMessageLabel: UILabel!
     
-    var viewModelDelegate: UserListViewModel?
+    var viewModelDelegate: UserListViewModelDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: .zero)

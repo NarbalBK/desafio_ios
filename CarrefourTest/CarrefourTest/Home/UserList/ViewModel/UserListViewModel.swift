@@ -7,18 +7,31 @@
 
 import Foundation
 
-final class UserListViewModel: NSObject {
+protocol UserListViewModelDelegate: NSObject {
+    var view: UserListViewDelegate { get }
+    var coordinatorDelegate: HomeCoordinatorDelegate { get }
+    var repository: HomeRepositoryProtocol { get }
+    var users: [UserResponse] { get set }
     
-    unowned let view: UserListView
-    unowned let coordinatorDelegate: HomeCoordinator
+    func getUsers()
+    func getSomeUser(name: String)
+    func getUserDetail(url: String, completion: @escaping (UserDetailResponse) -> Void) -> URLSessionDataTask?
+    func getImageProfile(url: String, completion: @escaping (Data) -> Void) -> URLSessionDataTask?
+    func goToUserProfile(profile: Data?, data: UserDetailResponse)
+}
+
+final class UserListViewModel: NSObject, UserListViewModelDelegate {
     
-    let repository: HomeRepository
+    unowned let view: UserListViewDelegate
+    unowned let coordinatorDelegate: HomeCoordinatorDelegate
+    
+    let repository: HomeRepositoryProtocol
 
     var users: [UserResponse] = []
     
     private let cache = NSCache<NSString, AnyObject>()
     
-    init (view: UserListView, coordinator: HomeCoordinator, repository: HomeRepository) {
+    init (view: UserListViewDelegate, coordinator: HomeCoordinatorDelegate, repository: HomeRepositoryProtocol) {
         self.view = view
         coordinatorDelegate = coordinator
         self.repository = repository

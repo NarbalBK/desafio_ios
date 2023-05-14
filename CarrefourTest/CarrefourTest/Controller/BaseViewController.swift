@@ -7,7 +7,14 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+protocol BaseViewControllerProtocol: NSObject {
+    var controllerDelegate: ControllerLifeCicleDelegate? { get set }
+    var contentView: UIView? { get set }
+    
+    func addView(view: UIView?)
+}
+
+class BaseViewController: UIViewController, BaseViewControllerProtocol {
     
     weak var controllerDelegate: ControllerLifeCicleDelegate?
     weak var contentView: UIView?

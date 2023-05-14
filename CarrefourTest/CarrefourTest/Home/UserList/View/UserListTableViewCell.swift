@@ -7,7 +7,16 @@
 
 import UIKit
 
-final class UserListTableViewCell: UITableViewCell {
+protocol UserListTableViewCellProtocol: NSObject {
+    var userDetailTask: URLSessionDataTask? { get set }
+    var userImageTask: URLSessionDataTask? { get set }
+    
+    func startLoading()
+    func setCellData(data: UserListCellModel)
+    func setProfileImage(data: Data)
+}
+
+final class UserListTableViewCell: UITableViewCell, UserListTableViewCellProtocol {
 
     @IBOutlet weak var cardContentView: UIView!
     

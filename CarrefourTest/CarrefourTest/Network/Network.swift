@@ -7,20 +7,23 @@
 
 import Foundation
 
-final class Network {
+protocol NetworkProtocol {
+    static func fetchRequestData(url: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask
+    static func fetchRequest<T: Decodable>(url: URLRequest, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask
+}
+
+final class Network: NetworkProtocol {
     
     static func fetchRequestData(url: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) -> URLSessionDataTask {
         let session = URLSession.shared
         let task = session.dataTask(with: url) { data, response, error in
-            
-            
             
             if let error = error {
                 completion(.failure(error))
             }
             
             if let response = response as? HTTPURLResponse {
-                print("STATUS CODE: \(response.statusCode) \(response.url?.absoluteString)")
+                print("STATUS CODE: \(response.statusCode) \(response.url?.absoluteString ?? "")")
             }
             
             if let data = data {

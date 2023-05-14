@@ -7,7 +7,12 @@
 
 import UIKit
 
-final class ActivityIndicatorView: UIView {
+protocol ActivityIndicatorViewProtocol: NSObject {
+    func addActivity()
+    func removeActivy()
+}
+
+final class ActivityIndicatorView: UIView, ActivityIndicatorViewProtocol {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
