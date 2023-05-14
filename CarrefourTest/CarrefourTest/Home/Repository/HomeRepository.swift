@@ -18,7 +18,6 @@ protocol HomeRepositoryProtocol {
 
 final class HomeRepository: HomeRepositoryProtocol {
     let baseUrl = "https://api.github.com/"
-    let token = "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"
     
     let unwrapError = NSError(domain: "Unwrap Error", code: -1)
     
@@ -93,7 +92,6 @@ final class HomeRepository: HomeRepositoryProtocol {
     func buildRequest(url: String) throws -> URLRequest {
         if let url = URL(string: url) {
             var request = URLRequest(url: url)
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             return request
         }
         throw unwrapError

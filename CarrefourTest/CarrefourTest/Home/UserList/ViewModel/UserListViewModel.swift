@@ -54,6 +54,11 @@ final class UserListViewModel: NSObject, UserListViewModelDelegate {
     }
     
     func getSomeUser(name: String) {
+        if name.isEmpty {
+            getUsers()
+            return
+        }
+        
         if name.count < 3 || name.count > 30 {
             return
         }

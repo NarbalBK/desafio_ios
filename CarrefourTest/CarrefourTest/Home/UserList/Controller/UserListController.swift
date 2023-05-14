@@ -9,7 +9,10 @@ import Foundation
 
 final class UserListController: BaseViewController {
     
-    // Intentionally empty.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Busca"
+    }
     
 }
 

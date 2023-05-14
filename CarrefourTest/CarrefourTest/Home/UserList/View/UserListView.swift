@@ -49,6 +49,7 @@ final class UserListView: UIView, UserListViewDelegate {
         searchBar.delegate = self
         
         tableView.register(UINib(nibName: reusableIdentifier, bundle: nil), forCellReuseIdentifier: reusableIdentifier)
+        searchBar.placeholder = "Digite o nome do usuário..."
     }
     
     func reloadData() {

@@ -9,6 +9,9 @@ import Foundation
 
 final class ReposListController: BaseViewController {
     
-    // Intentionally empty.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Repositórios"
+    }
     
 }

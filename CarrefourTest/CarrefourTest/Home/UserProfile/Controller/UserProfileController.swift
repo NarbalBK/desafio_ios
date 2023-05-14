@@ -9,6 +9,9 @@ import Foundation
 
 final class UserProfileController: BaseViewController {
     
-    // Intentionally empty.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Perfil"
+    }
     
 }
